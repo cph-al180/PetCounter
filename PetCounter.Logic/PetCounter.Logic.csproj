@@ -55,7 +55,7 @@
     <Compile Include="Model\PetBattler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage\BattlePetMoveStorage.cs" />
-    <Compile Include="Storage\BattlePetStorage.cs" />
+    <Compile Include="Storage\BattlePetInfoStorage.cs" />
     <Compile Include="Util\ObjectToJson.cs" />
   </ItemGroup>
   <ItemGroup>
