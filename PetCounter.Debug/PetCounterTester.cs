@@ -17,7 +17,7 @@ namespace PetCounter.Debug
             BattlePetInfo pet2 = (BattlePetInfo)battlePetStorage.GetItemByID("1");
             BattlePetInfo pet3 = (BattlePetInfo)battlePetStorage.GetItemByID("1");
 
-            PetBattler opponent = new PetBattler(new BattlePet(pet1, 26), new BattlePet(pet2, 25), new BattlePet(pet3, 25));
+            PetBattler opponent = new PetBattler(new BattlePet(pet1, 25), new BattlePet(pet2, 25), new BattlePet(pet3, 25));
         }
 
         private static void Setup()
