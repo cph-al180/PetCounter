@@ -27,7 +27,8 @@ namespace PetCounter.Logic.Storage
         {
             return new BattlePetInfo[]
             {
-                new BattlePetInfo("1", "Nexus Whelpling", BattlePetSpecies.Dragonkin, GetBattlePetMoveSet("1", "2", "3", "4", "5", "6"))
+                new BattlePetInfo("1", "Nexus Whelpling", BattlePetSpecies.Dragonkin, GetBattlePetMoveSet("1", "2", "3", "4", "5", "6")),
+                new BattlePetInfo("2", "Anubisath Idol", BattlePetSpecies.Humanoid, GetBattlePetMoveSet("7", "8", "9", "10", "11", "12"))
             };
         }
 

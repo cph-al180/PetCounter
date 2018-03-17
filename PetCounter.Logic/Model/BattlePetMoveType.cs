@@ -14,6 +14,7 @@ namespace PetCounter.Logic.Model
         DamageOverTime,
         DamageIncreaseDebuff,
         EnemyDamageDecreaseDebuff,
-        Weather
+        Weather,
+        Defense
     }
 }

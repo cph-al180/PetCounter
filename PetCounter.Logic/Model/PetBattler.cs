@@ -8,7 +8,7 @@ namespace PetCounter.Logic.Model
 {
     public class PetBattler
     {
-        private BattlePet[] battlePets;
+        public BattlePet[] battlePets { get; private set; }
 
         public PetBattler(BattlePet pet1, BattlePet pet2, BattlePet pet3)
         {

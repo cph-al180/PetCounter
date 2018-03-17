@@ -1,6 +1,9 @@
-﻿using PetCounter.Logic.Factory;
+﻿using PetCounter.Logic.Combat;
+using PetCounter.Logic.Factory;
 using PetCounter.Logic.Model;
 using PetCounter.Logic.Storage;
+using PetCounter.Logic.Util;
+using System;
 
 namespace PetCounter.Debug
 {
@@ -9,6 +12,7 @@ namespace PetCounter.Debug
         private static BattlePetMoveStorage battlePetMoveStorage;
         private static BattlePetMoveSetFactory battlePetMoveSetFactory;
         private static BattlePetInfoStorage battlePetStorage;
+        private static BattlePetSuggestionController battlePetSuggestionController;
 
         static void Main(string[] args)
         {
@@ -18,13 +22,20 @@ namespace PetCounter.Debug
             BattlePetInfo pet3 = (BattlePetInfo)battlePetStorage.GetItemByID("1");
 
             PetBattler opponent = new PetBattler(new BattlePet(pet1, 25), new BattlePet(pet2, 25), new BattlePet(pet3, 25));
+
+            BattlePetCollectionStatistics stats = battlePetSuggestionController.GetOpponentStatistics(opponent);
+
+            Console.WriteLine(ObjectToJson.BattlePetCollectionStatistics(stats));
+
+            Console.ReadLine();
         }
 
         private static void Setup()
         {
-            BattlePetMoveStorage battlePetMoveStorage = new BattlePetMoveStorage();
-            BattlePetMoveSetFactory battlePetMoveSetFactory = new BattlePetMoveSetFactory();
-            BattlePetInfoStorage battlePetStorage = new BattlePetInfoStorage(battlePetMoveStorage, battlePetMoveSetFactory);
+            battlePetMoveStorage = new BattlePetMoveStorage();
+            battlePetMoveSetFactory = new BattlePetMoveSetFactory();
+            battlePetStorage = new BattlePetInfoStorage(battlePetMoveStorage, battlePetMoveSetFactory);
+            battlePetSuggestionController = new BattlePetSuggestionController();
         }
     }
 }

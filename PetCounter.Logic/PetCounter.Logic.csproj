@@ -44,9 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Combat\BattlePetSuggestionController.cs" />
     <Compile Include="Factory\BattlePetMoveSetFactory.cs" />
     <Compile Include="Interface\IStorage.cs" />
     <Compile Include="Model\BattlePet.cs" />
+    <Compile Include="Model\BattlePetCollectionStatistics.cs" />
     <Compile Include="Model\BattlePetInfo.cs" />
     <Compile Include="Model\BattlePetMove.cs" />
     <Compile Include="Model\BattlePetMoveSet.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Storage\BattlePetMoveStorage.cs" />
     <Compile Include="Storage\BattlePetInfoStorage.cs" />
+    <Compile Include="Storage\UserBattlePetStorage.cs" />
     <Compile Include="Util\ObjectToJson.cs" />
   </ItemGroup>
   <ItemGroup>

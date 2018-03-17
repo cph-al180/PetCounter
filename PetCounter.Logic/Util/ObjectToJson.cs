@@ -14,5 +14,11 @@ namespace PetCounter.Logic.Util
         {
             return JsonConvert.SerializeObject(battlePet, Formatting.Indented);
         }
+
+        public static string BattlePetCollectionStatistics(BattlePetCollectionStatistics battlePetCollectionStatistics)
+        {
+            return JsonConvert.SerializeObject(battlePetCollectionStatistics, Formatting.Indented);
+        }
+
     }
 }
